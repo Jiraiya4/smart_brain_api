@@ -41,6 +41,6 @@ app.post('/register', (req, res) => {register.handleRegister(req, res, db, bcryp
 
 app.delete('/profile/delete', (req, res) => {profile.handleProfileDelete(req, res, db)})
 
-app.listen(3000, () => {
-    console.log('app is running on port 3000');
+app.listen(process.env.PORT || 3000, () => {
+    console.log(`app is running on port 3000 ${process.env.PORT}`);
 })
